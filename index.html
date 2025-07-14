@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comic Strip Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comic Loader</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div class="loading-screen">
-    <div class="loading-text">Loading... <span id="progress">0%</span></div>
+  <!-- Comic strip container behind loader -->
+  <div id="comic-strip">
+    <!-- You can add your comic here later -->
   </div>
 
-  <!-- Comic Container -->
-  <div class="comic-container">
-    <div class="strip">
-      <div class="panel" id="panel1">Panel 1 - About Me</div>
-      <div class="panel" id="panel2">Panel 2 - Projects</div>
-      <div class="panel" id="panel3">Panel 3 - Contact</div>
+  <!-- Loader on top -->
+  <div id="loader">
+    <div id="loading-overlay">
+      <div id="loading-text">Drawing the outlines...</div>
+      <div id="loading-percentage">0%</div>
     </div>
   </div>
 

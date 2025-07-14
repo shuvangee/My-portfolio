@@ -1,52 +1,63 @@
-body {
+/* Fonts */
+@font-face {
+  font-family: 'AnimeAceRegular';
+  src: url('animeace2_reg.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AnimeAceBold';
+  src: url('animeace2_bld.ttf') format('truetype');
+}
+
+/* Reset */
+html, body {
   margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  padding: 0;
+  height: 100%;
   overflow: hidden;
 }
 
-/* Loading Screen */
-.loading-screen {
-  position: fixed;
-  top: 0; left: 0;
+/* Comic strip background */
+#comic-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  font-size: 24px;
+  background: white; /* Change to any background you want */
+  z-index: 0;
 }
 
-/* Comic Strip */
-.comic-container {
-  width: 100vw;
-  height: 100vh;
-  background: #f7f7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 1s ease;
+/* Loader */
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  transition: transform 1s ease-in-out; /* This is the slide animation */
 }
 
-/* Panel Styling */
-.strip {
-  display: flex;
-  gap: 20px;
+/* Loader content */
+#loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.panel {
-  width: 300px;
-  height: 400px;
-  background: white;
-  border: 4px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+#loading-text {
+  font-family: 'AnimeAceBold', sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-/* Zoomed State */
-.comic-container.zoomed {
-  transform: scale(2) translateX(-150px);
+#loading-percentage {
+  font-family: 'AnimeAceRegular', sans-serif;
+  font-size: 1.5em;
 }
